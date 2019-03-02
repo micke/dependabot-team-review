@@ -2,17 +2,20 @@
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that A Probot app
 
-## Setup
+## Github actions/workflow
 
-```sh
-# Install dependencies
-npm install
+Add .githu/main.workflow
 
-# Run typescript
-npm run build
+```workflow
+workflow "Add reviewers to dependabot Pull Requests" {
+  on = "pull_request"
+  resolves = "Dependabot Team Review"
+}
 
-# Run the bot
-npm start
+action "Dependabot Team Review" {
+  uses = "micke/dependabot-team-review@master"
+  secrets = ["GITHUB_TOKEN"]
+}
 ```
 
 ## Contributing
