@@ -4,7 +4,7 @@
 
 ## Github actions/workflow
 
-Add .githu/main.workflow
+Add `.github/main.workflow`
 
 ```workflow
 workflow "Add reviewers to dependabot Pull Requests" {
